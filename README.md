@@ -16,10 +16,10 @@ Exercise Tracker is a web app that allows users to log their activities and stor
     - MongoDB
 
 ## Features
-1. Create new user by fill Create a New User form.
-2. Add activities by fill Add exercises form.
-3. Get all user information by send GET request to /api/users.
-4. Get exercise log by send GET request to /api/users/:\_id/logs.  
+1. Fill out the Create a New User form to create a new user.
+2. Fill out the exercise form to add activities.
+3. Get all user information by sending a GET request to /api/users.
+4. Get an exercise log by sending a GET request to /api/users/:\_id/logs.
   **GET /api/users/:_id/logs?[from][&to][&limit]**  
   **[ ]** = optional  
   **from, to** = dates (yyyy-mm-dd); **limit** = number  
