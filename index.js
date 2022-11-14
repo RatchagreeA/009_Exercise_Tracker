@@ -21,11 +21,14 @@ const userSchema = new mongoose.Schema({
 const Users = mongoose.model("Users", userSchema);
 console.log("DB connect status : ", mongoose.connection.readyState);
 
-app.use(cors());
+var corsOptions = {
+    origin: "*",
+};
+app.use(cors(corsOptions));
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(function middleware(req, res, next) {
-    const string = `${req.method} ${req.path} - ${req.ip}`;
+    const string = `${req.method} ${req.path} - ${req.ip} - loc:${req.headers.location} - Ori:${req.headers.origin}`;
     console.log(string);
     next();
 });
